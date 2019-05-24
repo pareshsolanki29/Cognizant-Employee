@@ -17,7 +17,7 @@ export class AppComponent {
 
   }
   getAllEmployees()  {this.employeeService.getEmployees().subscribe(
-    response =>{ this.employees = response; console.log(response)}
+    response =>{ this.employees = response; console.log(response) ;this.employeeService.employee.next(response)}
    );}
 
 }
